@@ -13,9 +13,8 @@ return new class extends Migration
     {
         Schema::create('films', function (Blueprint $table) {
             $table->id();
-            $table->string('url_image')->nullable();
+            $table->string('url');
             $table->string('titre');
-            $table->text('description, 255')->nullable();
             $table->timestamps();
         });
     }

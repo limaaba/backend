@@ -19,6 +19,7 @@ Route::get('/test-api', function () {
 });
 
 Route::get('/films', [FilmController::class, 'index']);
+Route::post('/films/store', [FilmController::class, 'store']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
